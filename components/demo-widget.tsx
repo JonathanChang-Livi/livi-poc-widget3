@@ -21,7 +21,7 @@ const DemoWidget = () => {
         <Card>
             <CardHeader className="text-2xl">Transaction History</CardHeader>
             <CardBody>
-                <div style={{display: 'none'}} className='justify-around w-full h-6 mb-5 w-full text-base font-semibold text-slate-500 text-left w-2/12 w-6/12'></div>
+                <div style={{display: 'none'}} className=' flex flex-col rounded-lg filter drop-shadow-md bg-white rounded-tr-lg rounded-bl-lg p-4 bg-primary text-2xl w-full'></div>
                 <Table header={heads} data={data}/>
             </CardBody>
         </Card>
