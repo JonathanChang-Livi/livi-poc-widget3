@@ -13,8 +13,8 @@ const nextConfig = {
         },
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
-          './demo': './components/demo-widget.js',
-          './table': './components/table.js',
+          './demo': './components/demo-widget',
+          './table': './components/table',
         },
         shared: {
           // whatever else
