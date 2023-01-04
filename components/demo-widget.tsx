@@ -19,7 +19,7 @@ const DemoWidget = () => {
     ]
     return (
         <Card>
-            <CardHeader className="text-2xl">Transaction History</CardHeader>
+            <CardHeader>Transaction History</CardHeader>
             <CardBody>
                 <Table header={heads} data={data}/>
             </CardBody>
