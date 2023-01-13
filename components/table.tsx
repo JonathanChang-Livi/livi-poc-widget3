@@ -4,20 +4,21 @@ export interface TableHeaderProps {
     header: TableHead[]
 }
 
+export type ColumnSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+
 export interface TableHead {
     value: string
-    width: number
+    width: ColumnSize
     position?: 'left' | 'center' | 'right'
 }
 
 const TableHeader = ({ header, className, override, style }: TableHeaderProps & ComponentProps) => {
-    const headClass = 'justify-around w-full h-6 mb-5'
+    const headClass = 'justify-around w-full h-6 mb-5 grid grid-cols-12'
     return (
         <Group className={`${override && override ? '' : headClass} ${className || ''}`} style={style}>
-            {<></>}
-            {header.map((head, i) => {
+            {header.map((head: { width: number; position: any; value: any }, i: any) => {
                 return (
-                    <div className={`${head.width && head.width !== 12 ? `w-${head.width}/12` : ''} flex p-2`}>
+                    <div className={`col-span-${head.width} flex p-2`}>
                         <p className={`w-full text-base font-semibold text-slate-500 text-${head.position || 'left'} `}>{head.value}</p>
                     </div>
                 )
@@ -32,13 +33,13 @@ export interface TableRowProps {
 }
 
 const TableRow = ({ field, header, className, override, style }: TableRowProps & ComponentProps) => {
-    const headClass = 'justify-around w-full'
+    const headClass = 'justify-around w-full grid grid-cols-12'
     return (
         <Group className={`${override && override ? '' : headClass} ${className || ''}`} style={style}>
             {<></>}
             {field.map((f, i) => {
                 return (
-                    <div className={`flex p-2 w-${header[i].width}/12`}>
+                    <div className={`flex p-2 col-span-${header[i].width}`}>
                         {f}
                     </div>
                 )
