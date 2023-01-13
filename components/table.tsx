@@ -16,7 +16,7 @@ const TableHeader = ({ header, className, override, style }: TableHeaderProps & 
     const headClass = 'justify-around w-full h-6 mb-5 grid grid-cols-12'
     return (
         <Group className={`${override && override ? '' : headClass} ${className || ''}`} style={style}>
-            {header.map((head, i)) => {
+            {header.map((head, i) => {
                 return (
                     <div className={`col-span-${head.width} flex p-2`}>
                         <p className={`w-full text-base font-semibold text-slate-500 text-${head.position || 'left'} `}>{head.value}</p>
