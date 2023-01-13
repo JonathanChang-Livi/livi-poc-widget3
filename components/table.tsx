@@ -54,7 +54,7 @@ export interface TableProps {
 }
 
 const Table = ({ header, data, className, override, style }: TableProps & ComponentProps) => {
-    const tableClass = ''
+    const tableClass = 'overflow-y-auto'
     return (
         <div className={`${override && override ? '' : tableClass} ${className || ''}`} style={style}>
             <TableHeader header={header} />
