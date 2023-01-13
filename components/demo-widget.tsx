@@ -18,7 +18,7 @@ const DemoWidget = () => {
         ['01 Jan 2023', 'Out', 'Test Supplier 5', <p className="text-red-700 font-black">HKD   -$100.00</p>],
     ]
     return (
-        <Card>
+        <Card className='h-full'>
             <CardHeader>Transaction History</CardHeader>
             <CardBody>
                 <Table header={heads} data={data}/>
