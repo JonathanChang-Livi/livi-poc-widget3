@@ -15,7 +15,7 @@ export interface TableHead {
 const TableHeader = ({ header, className, override, style }: TableHeaderProps & ComponentProps) => {
     const headClass = 'w-full h-6 mb-5 grid grid-cols-12'
     return (
-        <Group className={`${override && override ? '' : headClass} ${className || ''}`} style={style}>
+        <div className={`${override && override ? '' : headClass} ${className || ''}`} style={style}>
             {header.map((head, i) => {
                 return (
                     <div className={`col-span-${head.width} p-2`}>
@@ -23,7 +23,7 @@ const TableHeader = ({ header, className, override, style }: TableHeaderProps & 
                     </div>
                 )
             })}
-        </Group>
+        </div>
     )
 }
 
@@ -35,7 +35,7 @@ export interface TableRowProps {
 const TableRow = ({ field, header, className, override, style }: TableRowProps & ComponentProps) => {
     const headClass = 'w-full grid grid-cols-12'
     return (
-        <Group className={`${override && override ? '' : headClass} ${className || ''}`} style={style}>
+        <div className={`${override && override ? '' : headClass} ${className || ''}`} style={style}>
             {<></>}
             {field.map((f, i) => {
                 return (
@@ -44,7 +44,7 @@ const TableRow = ({ field, header, className, override, style }: TableRowProps &
                     </div>
                 )
             })}
-        </Group>
+        </div>
     )
 }
 
