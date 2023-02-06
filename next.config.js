@@ -14,7 +14,6 @@ const nextConfig = {
         filename: 'static/chunks/remoteEntry.js',
         exposes: {
           './demo': './components/demo-widget',
-          './table': './components/table',    
         },
         shared: {
           // whatever else
