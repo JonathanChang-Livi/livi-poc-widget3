@@ -112,7 +112,7 @@ const DemoWidget = () => {
     }
     Chart.register(...registerables)
     return (
-        <div className="rounded-lg flex flex-col justify-between w-full border border-slate-100 shadow-lg">
+        <div className="rounded-lg flex flex-col justify-between w-full border border-slate-100 shadow-lg h-full">
             <div className="rounded-t-lg p-4 flex flex-row w-full items-center justify-between bg-slate-200">
                 <Title className="font-black" override>Cashflow</Title>
                 <div className="flex flex-row justify-between items-center">
